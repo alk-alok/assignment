@@ -1,10 +1,16 @@
-import './App.css';
+import "./App.scss";
+import { BrowserRouter, Route, Routes } from "react-router-dom";
+import Home from "./MainPages/Home";
+import Products from "./MainPages/Product";
 
 function App() {
   return (
-    <div className="App">
-      Zevi Assignment
-    </div>
+    <BrowserRouter>
+      <Routes>
+        <Route path="/" element={<Home/>} />
+        <Route path="/products" element={<Products />} />
+      </Routes>
+    </BrowserRouter>
   );
 }
 
